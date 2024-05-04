@@ -13,7 +13,7 @@ class LoginPage(PageFactory):
         "password_field": ("ID", "field-password"),
         "submit_button": ("ID", "submit-login"),
         "no_acc_button": ("XPATH", "//*[@id='content']/div"),
-        "auth_failed_error": ("CSS_SELECTOR", "li.alert.alert-danger")
+        "auth_failed_error": ("CSS", "li.alert.alert-danger")
     }
 
     def enter_email(self, email):
@@ -30,16 +30,13 @@ class LoginPage(PageFactory):
     def click_no_acc_button(self):
         self.no_acc_button.click()
 
-    # FIXME: Assertion is not working properly, error message cannot be found
     def check_authentication_failed(self):
-        try:
-            error_element = self.auth_failed_error
-            error_message_text = error_element.text
+        error_message_text = self.auth_failed_error.text
 
-            expected_error_message = "Authentication failed."
+        expected_error_message = "Authentication failed."
 
-            self.asserEqual(error_message_text, expected_error_message)
-            print(f"{expected_error_message} - expected error message.\n"
-                  f"{error_message_text} - error message found on website.")
-        except KeyError:
-            print("\nError message not found.")
+        assert error_message_text == expected_error_message
+    #    if error_message_text == expected_error_message:
+    #        print("\nAssertion True.")
+    #    else:
+    #        print("\nAssertion False.")
