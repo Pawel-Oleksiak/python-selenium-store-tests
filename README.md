@@ -5,7 +5,7 @@ Selenium WebDriver, unittest and PageFactory
 Short roadmap for the repository:
 - [x] **Test login feature with valid credentials**\
       User can log in with valid credentials, assertion confirms that user logged in successfully
-- [ ] **Test login feature with invalid credentials (WIP)**\
+- [x] **Test login feature with invalid credentials**\
       User tries to log in with invalid credentials, assertion confirms visible error message
 - [ ] **Test registration of a new user feature**\
       User registers new account by entering required data
