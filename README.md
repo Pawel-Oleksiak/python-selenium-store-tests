@@ -9,9 +9,9 @@ Short roadmap for the repository:
       User tries to log in with invalid credentials, assertion confirms visible error message
 - [ ] **Test registration of a new user feature**\
       User registers new account by entering required data
-- [ ] **Test adding address feature**\
+- [x] **Test adding address feature**\
       User can add new address to the previously created account
-- [ ] **Test removing address feature**\
+- [x] **Test removing address feature**\
       User can delete previously added address
 - [ ] **Test e2e online shopping**\
       User can add product to the cart, go through the shopping process and finish the order
